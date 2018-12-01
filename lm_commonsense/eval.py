@@ -23,6 +23,8 @@ import pickle as pkl
 import numpy as np
 import tensorflow as tf
 import utils
+
+
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 
