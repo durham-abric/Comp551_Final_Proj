@@ -198,12 +198,14 @@ def evaluate_ensemble(test_data_name, number_of_lms):
 
 
 def main(_):
-  print("stating eval.py script")
-  evaluate_ensemble('pdp60', 1)  # 60%
-  # evaluate_ensemble('pdp60', 5)  # 70%
-  evaluate_ensemble('wsc273', 1)  # 61.5%
-  # evaluate_ensemble('wsc273', 14)  # 63.7%
+  with tf.device('/device:GPU:0'):
+    print("stating eval.py script")
+    evaluate_ensemble('pdp60', 1)  # 60%
+    # evaluate_ensemble('pdp60', 5)  # 70%
+    evaluate_ensemble('wsc273', 1)  # 61.5%
+    # evaluate_ensemble('wsc273', 14)  # 63.7%
 
 
 if __name__ == '__main__':
-  tf.app.run(main)
+  with tf.device('/device:GPU:0'):
+    tf.app.run(main)
