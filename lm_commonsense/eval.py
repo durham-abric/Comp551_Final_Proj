@@ -26,7 +26,7 @@ import utils
 
 
 config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
+#config.gpu_options.allow_growth = True
 
 tf.app.flags.DEFINE_string(
     'data_dir', 'reproduce', 
@@ -38,7 +38,6 @@ FLAGS = tf.app.flags.FLAGS
 
 class EnsembleLM(object):
   """Ensemble of language models."""
-  with tf.device('/device:GPU:0'):
 
     def __init__(self, test_data_name='wsc273'):
       vocab_file = os.path.join(FLAGS.data_dir, 'vocab.txt')
@@ -54,13 +53,9 @@ class EnsembleLM(object):
     def add_single_model(self, model_name='lm1'):
       """Add a single model into the current ensemble."""
       # Create single LM
-      print("creating single recurrent LM...")
       single_lm = SingleRecurrentLanguageModel(self.vocab, model_name)
-      print("single LM created.")
       # Add the single LM prediction.
-      print("assigning prediction to single model...")
       probs = single_lm.assign_probs(self.sentences, self.test_data_name)
-      print("probabilities assigned")
       self.all_probs.append(probs)
       print('Done adding {}'.format(model_name))
 
@@ -85,8 +80,7 @@ class EnsembleLM(object):
 
 
 class SingleRecurrentLanguageModel(object):
-  with tf.device('/device:GPU:0'):
-
+  
     def __init__(self, vocab, model_name='lm01'):
       self.vocab = vocab
       self.log_dir = os.path.join(FLAGS.data_dir, model_name)
@@ -134,7 +128,7 @@ class SingleRecurrentLanguageModel(object):
         self.reset()  # reset states before processing each row.
         row_probs = np.zeros([batch_size, 0])
         for j, word_patch in enumerate(row):
-          print('Processing patch '
+          print('Processing Patch: '
                 '({}, {}) / ({}, {})'.format(i+1, j+1, nrow, ncol))
           patch_probs = (self._score(word_patch) if word_patch else
                         np.zeros([batch_size, num_timesteps]))
@@ -151,15 +145,11 @@ class SingleRecurrentLanguageModel(object):
         with tf.gfile.Open(probs_cache, 'r') as f:
          probs = pkl.load(f)
       else:
-        print("resetting graph") 
         tf.reset_default_graph()
-        print("starting session")
         self.sess = tf.Session(config=config)
         # Build the graph.
-        print("building the pretrained graph")
         saver = tf.train.import_meta_graph(
             os.path.join(self.log_dir, 'ckpt-best.meta'), clear_devices=True)
-        print("restoring session of pretrained graph")
         saver.restore(self.sess, os.path.join(self.log_dir, 'ckpt-best'))
         print('Restored from {}'.format(self.log_dir))
         graph = tf.get_default_graph()
@@ -182,28 +172,30 @@ class SingleRecurrentLanguageModel(object):
 
 
 def evaluate_ensemble(test_data_name, number_of_lms):
-  print("creating ensemble")
   ensemble = EnsembleLM(test_data_name)
-  print("ensemble created")
-  # model_list = ['lm{:02d}'.format(i+1) for i in range(number_of_lms)]
-  model_list = ['lm04']
+  model_list = ['lm{:02d}'.format(i+1) for i in range(number_of_lms)]
   for model_name in model_list:
-    print("adding model '%s' to ensemble" % model_name)
+    print('\n     New Evaluation:')
+    print("         Adding model '%s' to ensemble" % model_name)
     ensemble.add_single_model(model_name)
-  print("model complete")
-  print("evaluating the model...")
   accuracy = ensemble.evaluate()
-  print('Accuracy of {} LM(s) on {} = {}'.format(
+  print('           *** Accuracy of {} LM(s) on {} = {} ***'.format(
       number_of_lms, test_data_name, accuracy))
 
 
 def main(_):
-  with tf.device('/device:GPU:0'):
-    print("stating eval.py script")
+  #with tf.device('/device:GPU:0'):
+    print("Evaluating Model(s) on PDP-60:")
     evaluate_ensemble('pdp60', 1)  # 60%
-    # evaluate_ensemble('pdp60', 5)  # 70%
+    evaluate_ensemble('pdp60', 5)  # 70%
+    evaluate_ensemble('pdp60', 10)  # 70%
+    evaluate_ensemble('pdp60', 14)  # 70%
+
+    print("Evaluating Model(s) on WSC-273:")
     evaluate_ensemble('wsc273', 1)  # 61.5%
-    # evaluate_ensemble('wsc273', 14)  # 63.7%
+    evaluate_ensemble('wsc273', 5)  # 61.5%
+    evaluate_ensemble('wsc273', 10)  # 61.5%
+    evaluate_ensemble('wsc273', 14)  # 63.7%
 
 
 if __name__ == '__main__':
