@@ -26,7 +26,8 @@ import utils
 
 
 config = tf.ConfigProto()
-#config.gpu_options.allow_growth = True
+config.gpu_options.allow_growth = True
+config.log_device_placement=True
 
 tf.app.flags.DEFINE_string(
     'data_dir', 'reproduce', 
@@ -199,5 +200,5 @@ def main(_):
 
 
 if __name__ == '__main__':
-  with tf.device('/device:GPU:0'):
-    tf.app.run(main)
+ # with tf.device('/device:GPU:0'):
+ tf.app.run(main)

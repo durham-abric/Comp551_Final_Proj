@@ -1,0 +1,16 @@
+Evaluating Model(s) on PDP-60:
+
+     New Evaluation:
+         Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Reset RNN states.
+Processing Patch: (1, 1) / (2, 4)
+Probs for 
+[['Then' 'Dad' 'figured' ..., 'man' "'s" 'board-bill']
+ ['Then' 'Dad' 'figured' ..., 'man' "'s" 'board-bill']
+ ['Always' 'before' ',' ..., 'now' ',' 'for']
+ ..., 
+ ['Mark' 'was' 'close' ..., 'promising' 'him' ',']
+ ['Mark' 'was' 'close' ..., 'promising' 'him' ',']
+ ['Mark' 'was' 'close' ..., 'promising' 'him' ',']]
+=
