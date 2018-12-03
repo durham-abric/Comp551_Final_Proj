@@ -162,6 +162,8 @@ class SingleRecurrentLanguageModel(object):
 
       # Cut sentences into patches of shape processable by the LM.
       batch_size, num_timesteps = self.shape
+      print(batch_size)
+      print(num_timesteps)
       word_patches = utils.cut_to_patches(sentences, batch_size, num_timesteps)
       probs = self._score_patches(word_patches)
 
@@ -185,17 +187,17 @@ def evaluate_ensemble(test_data_name, number_of_lms):
 
 def main(_):
   #with tf.device('/device:GPU:0'):
-    print("Evaluating Model(s) on PDP-60:")
-    evaluate_ensemble('pdp60', 1)  # 60%
-    evaluate_ensemble('pdp60', 5)  # 70%
-    evaluate_ensemble('pdp60', 10)  # 70%
-    evaluate_ensemble('pdp60', 14)  # 70%
+  print("Evaluating Model(s) on PDP-60:")
+  evaluate_ensemble('pdp60', 1)  # 60%
+  evaluate_ensemble('pdp60', 5)  # 70%
+  evaluate_ensemble('pdp60', 10)  # 70%
+  evaluate_ensemble('pdp60', 14)  # 70%
 
-    print("Evaluating Model(s) on WSC-273:")
-    evaluate_ensemble('wsc273', 1)  # 61.5%
-    evaluate_ensemble('wsc273', 5)  # 61.5%
-    evaluate_ensemble('wsc273', 10)  # 61.5%
-    evaluate_ensemble('wsc273', 14)  # 63.7%
+  print("Evaluating Model(s) on WSC-273:")
+  evaluate_ensemble('wsc273', 1)  # 61.5%
+  evaluate_ensemble('wsc273', 5)  # 61.5%
+  evaluate_ensemble('wsc273', 10)  # 61.5%
+  evaluate_ensemble('wsc273', 14)  # 63.7%
 
 
 if __name__ == '__main__':
