@@ -54,33 +54,33 @@ class EnsembleLM(object):
   def add_single_model(self, model_name='lm1'):
     """Add a single model into the current ensemble."""
     # Create single LM
-    with tf.device('/device:GPU:2'):
-      single_lm = SingleRecurrentLanguageModel(self.vocab, model_name)
+    #with tf.device('/device:GPU:2'):
+    single_lm = SingleRecurrentLanguageModel(self.vocab, model_name)
         # Add the single LM prediction.
 
-    with tf.device('/device:GPU:3'):
-      probs = single_lm.assign_probs(self.sentences, self.test_data_name)
+    #with tf.device('/device:GPU:3'):
+    probs = single_lm.assign_probs(self.sentences, self.test_data_name)
     self.all_probs.append(probs)
     print('Done adding {}'.format(model_name))
 
   def evaluate(self):
     """Evaluate the current ensemble."""
     # Attach word probabilities and correctness label to each substitution
-    with tf.device('/device:GPU:1'):
-      ensembled_probs = sum(self.all_probs) / len(self.all_probs)
+    #with tf.device('/device:GPU:1'):
+    ensembled_probs = sum(self.all_probs) / len(self.all_probs)
 
-    with tf.device('/device:GPU:3'):
-      scorings = []
-      for i, sentence in enumerate(self.sentences):
-        correctness = self.labels[i]
-        word_probs = ensembled_probs[i, :len(sentence)]
-        joint_prob = np.prod(word_probs, dtype=np.float64)
+  #with tf.device('/device:GPU:3'):
+    scorings = []
+    for i, sentence in enumerate(self.sentences):
+      correctness = self.labels[i]
+      word_probs = ensembled_probs[i, :len(sentence)]
+      joint_prob = np.prod(word_probs, dtype=np.float64)
 
-        scorings.append(dict(
-            correctness=correctness,
-            sentence=sentence,
-            joint_prob=joint_prob,
-            word_probs=word_probs))
+      scorings.append(dict(
+          correctness=correctness,
+          sentence=sentence,
+          joint_prob=joint_prob,
+          word_probs=word_probs))
 
     scoring_mode = 'full' if self.test_data_name == 'pdp60' else 'partial'
     return utils.compare_substitutions(
@@ -162,20 +162,20 @@ class SingleRecurrentLanguageModel(object):
       print('Restored from {}'.format(self.log_dir))
       graph = tf.get_default_graph()
 
-      with tf.device('/device:GPU:3'):
-        self.tensors = dict(
-          inputs_in=graph.get_tensor_by_name('test_inputs_in:0'),
-          char_inputs_in=graph.get_tensor_by_name('test_char_inputs_in:0'),
-          softmax_out=graph.get_tensor_by_name('SotaRNN_1/softmax_out:0'),
-          states_init=graph.get_operation_by_name('SotaRNN_1/states_init'))
-        self.shape = self.tensors['inputs_in'].shape.as_list()
+      #with tf.device('/device:GPU:3'):
+      self.tensors = dict(
+        inputs_in=graph.get_tensor_by_name('test_inputs_in:0'),
+        char_inputs_in=graph.get_tensor_by_name('test_char_inputs_in:0'),
+        softmax_out=graph.get_tensor_by_name('SotaRNN_1/softmax_out:0'),
+        states_init=graph.get_operation_by_name('SotaRNN_1/states_init'))
+      self.shape = self.tensors['inputs_in'].shape.as_list()
 
       # Cut sentences into patches of shape processable by the LM.
       batch_size, num_timesteps = self.shape
-      with tf.device('/device:GPU:1'):
-        word_patches = utils.cut_to_patches(sentences, batch_size, num_timesteps)
-      with tf.device('/device:GPU:2'):
-        probs = self._score_patches(word_patches)
+      #with tf.device('/device:GPU:1'):
+      word_patches = utils.cut_to_patches(sentences, batch_size, num_timesteps)
+      #with tf.device('/device:GPU:2'):
+      probs = self._score_patches(word_patches)
 
       # Cache the probs since they are expensive to evaluate
       with tf.gfile.Open(probs_cache, 'w') as f:
@@ -211,5 +211,5 @@ def main(_):
 
 
 if __name__ == '__main__':
- # with tf.device('/device:GPU:0'):
- tf.app.run(main)
+  tf.app.run(main)
+
