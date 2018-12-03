@@ -200,24 +200,24 @@ def main(_):
   #with tf.device('/device:GPU:0'):
   print("\n\nEvaluating Model(s) on PDP-60:")
   evaluate_ensemble('pdp60', 1)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
   evaluate_ensemble('pdp60', 5)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
   evaluate_ensemble('pdp60', 10)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=666.1))))
-  evaluate_ensemble('pdp60', 14)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+
+  print("Completed Evaluation (PDP-60), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
 
 
   print("\n\nEvaluating Model(s) on WSC-273:")
   evaluate_ensemble('wsc273', 1)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
   evaluate_ensemble('wsc273', 5)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
   evaluate_ensemble('wsc273', 10)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
   evaluate_ensemble('wsc273', 14)  # 63.7%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=666.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
 
 
 
