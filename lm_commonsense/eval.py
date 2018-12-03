@@ -23,6 +23,7 @@ import pickle as pkl
 import numpy as np
 import tensorflow as tf
 import utils
+import datetime
 
 
 config = tf.ConfigProto()
@@ -104,7 +105,7 @@ class SingleRecurrentLanguageModel(object):
     char_ids = np.array(
         [[self.vocab.word_to_char_ids(word) for word in row]
           for row in word_patch])
-    print('Probs for \n{}\n='.format(np.array(word_patch)[:, 1:]))
+    #print('Probs for \n{}\n='.format(np.array(word_patch)[:, 1:]))
 
     input_ids, target_ids = word_ids[:, :-1], word_ids[:, 1:]
     input_char_ids = char_ids[:, :-1, :]
@@ -120,7 +121,7 @@ class SingleRecurrentLanguageModel(object):
     probs = np.array([[softmax[row, col, target_ids[row, col]]
                       for col in range(num_timesteps)]
                       for row in range(batch_size)])
-    print(probs)
+    #print(probs)
     return probs
 
   def _score_patches(self, word_patches):
@@ -132,12 +133,12 @@ class SingleRecurrentLanguageModel(object):
 
     # Loop through the 2D matrix of word_patches and score each.
     for i, row in enumerate(word_patches):
-      print('Reset RNN states.')
+      #print('Reset RNN states.')
       self.reset()  # reset states before processing each row.
       row_probs = np.zeros([batch_size, 0])
       for j, word_patch in enumerate(row):
-        print('Processing Patch: '
-              '({}, {}) / ({}, {})'.format(i+1, j+1, nrow, ncol))
+        #print('Processing Patch: '
+              #'({}, {}) / ({}, {})'.format(i+1, j+1, nrow, ncol))
         patch_probs = (self._score(word_patch) if word_patch else
                       np.zeros([batch_size, num_timesteps]))
         row_probs = np.concatenate([row_probs, patch_probs], 1)
@@ -187,8 +188,8 @@ def evaluate_ensemble(test_data_name, number_of_lms):
   ensemble = EnsembleLM(test_data_name)
   model_list = ['lm{:02d}'.format(i+1) for i in range(number_of_lms)]
   for model_name in model_list:
-    print('\n     New Evaluation:')
-    print("         Adding model '%s' to ensemble" % model_name)
+    print('\nNew Evaluation:')
+    print("Adding model '%s' to ensemble" % model_name)
     ensemble.add_single_model(model_name)
   accuracy = ensemble.evaluate()
   print('           *** Accuracy of {} LM(s) on {} = {} ***'.format(
@@ -197,17 +198,27 @@ def evaluate_ensemble(test_data_name, number_of_lms):
 
 def main(_):
   #with tf.device('/device:GPU:0'):
-  print("Evaluating Model(s) on PDP-60:")
+  print("\n\nEvaluating Model(s) on PDP-60:")
   evaluate_ensemble('pdp60', 1)  # 60%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=666.1)))
   evaluate_ensemble('pdp60', 5)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=666.1)))
   evaluate_ensemble('pdp60', 10)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=666.1)))
   evaluate_ensemble('pdp60', 14)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=666.1)))
 
-  print("Evaluating Model(s) on WSC-273:")
+
+  print("\n\nEvaluating Model(s) on WSC-273:")
   evaluate_ensemble('wsc273', 1)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=666.1)))
   evaluate_ensemble('wsc273', 5)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=666.1)))
   evaluate_ensemble('wsc273', 10)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=666.1)))
   evaluate_ensemble('wsc273', 14)  # 63.7%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=666.1)))
+
 
 
 if __name__ == '__main__':
