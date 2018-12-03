@@ -27,7 +27,7 @@ import utils
 
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
-config.log_device_placement=True
+#config.log_device_placement=True
 
 tf.app.flags.DEFINE_string(
     'data_dir', 'reproduce', 
@@ -178,8 +178,8 @@ class SingleRecurrentLanguageModel(object):
       probs = self._score_patches(word_patches)
 
       # Cache the probs since they are expensive to evaluate
-      with tf.gfile.Open(probs_cache, 'w') as f:
-        pkl.dump(probs, f)
+      #with tf.gfile.Open(probs_cache, 'w') as f:
+        #pkl.dump(probs, f)
     return probs
 
 
