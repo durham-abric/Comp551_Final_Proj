@@ -229,7 +229,7 @@ def tokenize(sentence):
 def parse_commonsense_reasoning_test(test_data_name):
   """Read JSON test data."""
   with tf.gfile.Open(os.path.join(
-      FLAGS.data_dir, 'reproduce/commonsense_test',
+      FLAGS.data_dir,
       '{}.json'.format(test_data_name)), 'r') as f:
     data = json.load(f)
 
