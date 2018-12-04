@@ -23,7 +23,7 @@ import pickle as pkl
 import numpy as np
 import tensorflow as tf
 import utils
-import datetime
+import time
 
 
 config = tf.ConfigProto()
@@ -186,61 +186,66 @@ def evaluate_ensemble(test_data_name, number_of_lms):
 
 
 def main(_):
+  startTime = time.time()
   print("\n\nEvaluating Model(s) on PDP-60:")
   evaluate_ensemble('pdp60', 1)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 1 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 2)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 2 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 2 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 3)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 3 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 3 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 4)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 4 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 4 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 5)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 5 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 6)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 6 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 6 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 7)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 7 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 7 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 8)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 8 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 8 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 9)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 9 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 9 at runtime- {}".format(utils.getSecondsDiff(startTime)))
+  evaluate_ensemble('pdp60', 10)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 10 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 11)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 11 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 12 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 12)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 12 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 12 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 13)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 13 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 13 at runtime- {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('pdp60', 14)  # 60%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (PDP-60), Ensemble Size: 14 at runtime- {}".format(utils.getSecondsDiff(startTime)))
 
   print("\n\nEvaluating Model(s) on WSC-273:")
   evaluate_ensemble('wsc273', 1)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 1 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 2)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 2 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 2 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 3)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 3 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 3 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 4)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 4 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 4 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 5)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 5 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 6)  # 63.7%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 6 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 6 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 7)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 7 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 7 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 8)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 8 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 8 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 9)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 9 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 9 at - {}".format(utils.getSecondsDiff(startTime)))
+  evaluate_ensemble('wsc273', 10)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 10 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 11)  # 63.7%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 11 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 11 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 12)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 12 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 12 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 13)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 13 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 13 at - {}".format(utils.getSecondsDiff(startTime)))
   evaluate_ensemble('wsc273', 14)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  print("Completed Evaluation (WSC-273), Ensemble Size: 14 at - {}".format(utils.getSecondsDiff(startTime)))
 
 if __name__ == '__main__':
   tf.app.run(main)
