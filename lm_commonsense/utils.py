@@ -22,6 +22,7 @@ import json
 import os
 import numpy as np
 import tensorflow as tf
+import time
 
 FLAGS = tf.flags.FLAGS
 
@@ -319,6 +320,9 @@ def _substitution_mask(sent1, sent2):
   return (mask1_start + [1.] * len(sent1) + mask1_end,
           mask2_start + [1.] * len(sent2) + mask2_end)
 
+def getSecondsDiff(start):
+      diff = time.time() - start
+      return str(diff)
 
 def _convert_to_partial(scoring1, scoring2):
   """Convert full scoring into partial scoring."""

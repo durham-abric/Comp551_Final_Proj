@@ -27,8 +27,6 @@ import datetime
 
 
 config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-#config.log_device_placement=True
 
 tf.app.flags.DEFINE_string(
     'data_dir', 'reproduce', 
@@ -55,11 +53,9 @@ class EnsembleLM(object):
   def add_single_model(self, model_name='lm1'):
     """Add a single model into the current ensemble."""
     # Create single LM
-    #with tf.device('/device:GPU:2'):
     single_lm = SingleRecurrentLanguageModel(self.vocab, model_name)
         # Add the single LM prediction.
 
-    #with tf.device('/device:GPU:3'):
     probs = single_lm.assign_probs(self.sentences, self.test_data_name)
     self.all_probs.append(probs)
     print('Done adding {}'.format(model_name))
@@ -67,10 +63,8 @@ class EnsembleLM(object):
   def evaluate(self):
     """Evaluate the current ensemble."""
     # Attach word probabilities and correctness label to each substitution
-    #with tf.device('/device:GPU:1'):
     ensembled_probs = sum(self.all_probs) / len(self.all_probs)
 
-  #with tf.device('/device:GPU:3'):
     scorings = []
     for i, sentence in enumerate(self.sentences):
       correctness = self.labels[i]
@@ -105,7 +99,6 @@ class SingleRecurrentLanguageModel(object):
     char_ids = np.array(
         [[self.vocab.word_to_char_ids(word) for word in row]
           for row in word_patch])
-    #print('Probs for \n{}\n='.format(np.array(word_patch)[:, 1:]))
 
     input_ids, target_ids = word_ids[:, :-1], word_ids[:, 1:]
     input_char_ids = char_ids[:, :-1, :]
@@ -121,7 +114,6 @@ class SingleRecurrentLanguageModel(object):
     probs = np.array([[softmax[row, col, target_ids[row, col]]
                       for col in range(num_timesteps)]
                       for row in range(batch_size)])
-    #print(probs)
     return probs
 
   def _score_patches(self, word_patches):
@@ -137,7 +129,7 @@ class SingleRecurrentLanguageModel(object):
       self.reset()  # reset states before processing each row.
       row_probs = np.zeros([batch_size, 0])
       for j, word_patch in enumerate(row):
-        #print('Processing Patch: '
+        print('Processing Patch: '
               #'({}, {}) / ({}, {})'.format(i+1, j+1, nrow, ncol))
         patch_probs = (self._score(word_patch) if word_patch else
                       np.zeros([batch_size, num_timesteps]))
@@ -163,7 +155,6 @@ class SingleRecurrentLanguageModel(object):
       print('Restored from {}'.format(self.log_dir))
       graph = tf.get_default_graph()
 
-      #with tf.device('/device:GPU:3'):
       self.tensors = dict(
         inputs_in=graph.get_tensor_by_name('test_inputs_in:0'),
         char_inputs_in=graph.get_tensor_by_name('test_char_inputs_in:0'),
@@ -173,9 +164,7 @@ class SingleRecurrentLanguageModel(object):
 
       # Cut sentences into patches of shape processable by the LM.
       batch_size, num_timesteps = self.shape
-      #with tf.device('/device:GPU:1'):
       word_patches = utils.cut_to_patches(sentences, batch_size, num_timesteps)
-      #with tf.device('/device:GPU:2'):
       probs = self._score_patches(word_patches)
 
       # Cache the probs since they are expensive to evaluate
@@ -197,29 +186,61 @@ def evaluate_ensemble(test_data_name, number_of_lms):
 
 
 def main(_):
-  #with tf.device('/device:GPU:0'):
   print("\n\nEvaluating Model(s) on PDP-60:")
   evaluate_ensemble('pdp60', 1)  # 60%
   print("Completed Evaluation (PDP-60), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-  evaluate_ensemble('pdp60', 5)  # 70%
+  evaluate_ensemble('pdp60', 2)  # 60%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 2 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 3)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 3 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 4)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 4 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 5)  # 60%
   print("Completed Evaluation (PDP-60), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-  evaluate_ensemble('pdp60', 10)  # 70%
-  print("Completed Evaluation (PDP-60), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-
+  evaluate_ensemble('pdp60', 6)  # 60%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 6 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 7)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 7 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 8)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 8 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 9)  # 60%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 9 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 11)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 11 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 12)  # 70%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 12 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 13)  # 60%
+  print("Completed Evaluation (PDP-60), Ensemble Size: 13 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('pdp60', 14)  # 60%
   print("Completed Evaluation (PDP-60), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-
 
   print("\n\nEvaluating Model(s) on WSC-273:")
   evaluate_ensemble('wsc273', 1)  # 61.5%
   print("Completed Evaluation (WSC-273), Ensemble Size: 1 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 2)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 2 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 3)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 3 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 4)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 4 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
   evaluate_ensemble('wsc273', 5)  # 61.5%
   print("Completed Evaluation (WSC-273), Ensemble Size: 5 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-  evaluate_ensemble('wsc273', 10)  # 61.5%
-  print("Completed Evaluation (WSC-273), Ensemble Size: 10 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-  evaluate_ensemble('wsc273', 14)  # 63.7%
+  evaluate_ensemble('wsc273', 6)  # 63.7%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 6 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 7)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 7 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 8)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 8 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 9)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 9 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 11)  # 63.7%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 11 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 12)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 12 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 13)  # 61.5%
+  print("Completed Evaluation (WSC-273), Ensemble Size: 13 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
+  evaluate_ensemble('wsc273', 14)  # 61.5%
   print("Completed Evaluation (WSC-273), Ensemble Size: 14 at - {}".format(str(datetime.timedelta(seconds=86401.1))))
-
-
 
 if __name__ == '__main__':
   tf.app.run(main)
