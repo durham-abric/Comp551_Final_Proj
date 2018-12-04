@@ -2,7 +2,7 @@
 
 read -p 'PID of Process: ' model_pid
 
-printResourceUse="top -p$model_pid -b -n 1 >> outputs/eval_resources.txt"
+printResourceUse="top -b -n 1 | grep "$model_pid" >> outputs/eval_resources.txt"
 
 echo "Monitoring Started!"
 
