@@ -1,0 +1,720 @@
+
+
+Evaluating Model(s) on PDP-60:
+Evaluating 1 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+           *** Accuracy of 1 LM(s) on pdp60 = 0.6 ***
+Completed Evaluation (PDP-60), Ensemble Size: 1 at runtime- 124.359174967
+Evaluating 2 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+           *** Accuracy of 2 LM(s) on pdp60 = 0.6 ***
+Completed Evaluation (PDP-60), Ensemble Size: 2 at runtime- 404.700851917
+Evaluating 3 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+           *** Accuracy of 3 LM(s) on pdp60 = 0.616666666667 ***
+Completed Evaluation (PDP-60), Ensemble Size: 3 at runtime- 796.463335037
+Evaluating 4 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+           *** Accuracy of 4 LM(s) on pdp60 = 0.666666666667 ***
+Completed Evaluation (PDP-60), Ensemble Size: 4 at runtime- 1285.04546094
+Evaluating 5 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+           *** Accuracy of 5 LM(s) on pdp60 = 0.7 ***
+Completed Evaluation (PDP-60), Ensemble Size: 5 at runtime- 1952.2217741
+Evaluating 6 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+           *** Accuracy of 6 LM(s) on pdp60 = 0.65 ***
+Completed Evaluation (PDP-60), Ensemble Size: 6 at runtime- 2725.8318069
+Evaluating 7 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+           *** Accuracy of 7 LM(s) on pdp60 = 0.65 ***
+Completed Evaluation (PDP-60), Ensemble Size: 7 at runtime- 3602.8667779
+Evaluating 8 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+           *** Accuracy of 8 LM(s) on pdp60 = 0.633333333333 ***
+Completed Evaluation (PDP-60), Ensemble Size: 8 at runtime- 4579.21589088
+Evaluating 9 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+           *** Accuracy of 9 LM(s) on pdp60 = 0.65 ***
+Completed Evaluation (PDP-60), Ensemble Size: 9 at runtime- 5683.05340409
+Evaluating 10 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+           *** Accuracy of 10 LM(s) on pdp60 = 0.666666666667 ***
+Completed Evaluation (PDP-60), Ensemble Size: 10 at runtime- 6894.50861096
+Evaluating 11 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+           *** Accuracy of 11 LM(s) on pdp60 = 0.683333333333 ***
+Completed Evaluation (PDP-60), Ensemble Size: 12 at runtime- 8275.93449306
+Evaluating 12 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+Adding model 'lm12' to ensemble
+Restored from gs://comp551_storage/reproduce/lm12
+Done adding lm12
+           *** Accuracy of 12 LM(s) on pdp60 = 0.666666666667 ***
+Completed Evaluation (PDP-60), Ensemble Size: 12 at runtime- 9830.77159595
+Evaluating 13 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+Adding model 'lm12' to ensemble
+Restored from gs://comp551_storage/reproduce/lm12
+Done adding lm12
+Adding model 'lm13' to ensemble
+Restored from gs://comp551_storage/reproduce/lm13
+Done adding lm13
+           *** Accuracy of 13 LM(s) on pdp60 = 0.666666666667 ***
+Completed Evaluation (PDP-60), Ensemble Size: 13 at runtime- 11540.814127
+Evaluating 14 models on pdp60 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+Adding model 'lm12' to ensemble
+Restored from gs://comp551_storage/reproduce/lm12
+Done adding lm12
+Adding model 'lm13' to ensemble
+Restored from gs://comp551_storage/reproduce/lm13
+Done adding lm13
+Adding model 'lm14' to ensemble
+Restored from gs://comp551_storage/reproduce/lm14
+Done adding lm14
+           *** Accuracy of 14 LM(s) on pdp60 = 0.666666666667 ***
+Completed Evaluation (PDP-60), Ensemble Size: 14 at runtime- 13371.819268
+
+
+Evaluating Model(s) on WSC-273:
+Evaluating 1 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+           *** Accuracy of 1 LM(s) on wsc273 = 0.545787545788 ***
+Completed Evaluation (WSC-273), Ensemble Size: 1 at - 13518.46257
+Evaluating 2 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+           *** Accuracy of 2 LM(s) on wsc273 = 0.531135531136 ***
+Completed Evaluation (WSC-273), Ensemble Size: 2 at - 13889.7929001
+Evaluating 3 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+           *** Accuracy of 3 LM(s) on wsc273 = 0.556776556777 ***
+Completed Evaluation (WSC-273), Ensemble Size: 3 at - 14405.100863
+Evaluating 4 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+           *** Accuracy of 4 LM(s) on wsc273 = 0.556776556777 ***
+Completed Evaluation (WSC-273), Ensemble Size: 4 at - 15047.6777611
+Evaluating 5 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+           *** Accuracy of 5 LM(s) on wsc273 = 0.564102564103 ***
+Completed Evaluation (WSC-273), Ensemble Size: 5 at - 15930.0652101
+Evaluating 6 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+           *** Accuracy of 6 LM(s) on wsc273 = 0.567765567766 ***
+Completed Evaluation (WSC-273), Ensemble Size: 6 at - 16955.4577501
+Evaluating 7 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+           *** Accuracy of 7 LM(s) on wsc273 = 0.567765567766 ***
+Completed Evaluation (WSC-273), Ensemble Size: 7 at - 18108.6063161
+Evaluating 8 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+           *** Accuracy of 8 LM(s) on wsc273 = 0.59706959707 ***
+Completed Evaluation (WSC-273), Ensemble Size: 8 at - 19391.355541
+Evaluating 9 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+           *** Accuracy of 9 LM(s) on wsc273 = 0.608058608059 ***
+Completed Evaluation (WSC-273), Ensemble Size: 9 at - 20832.518775
+Evaluating 10 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+           *** Accuracy of 10 LM(s) on wsc273 = 0.615384615385 ***
+Completed Evaluation (WSC-273), Ensemble Size: 10 at - 22403.544281
+Evaluating 11 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+           *** Accuracy of 11 LM(s) on wsc273 = 0.600732600733 ***
+Completed Evaluation (WSC-273), Ensemble Size: 11 at - 24220.7133541
+Evaluating 12 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+Adding model 'lm12' to ensemble
+Restored from gs://comp551_storage/reproduce/lm12
+Done adding lm12
+           *** Accuracy of 12 LM(s) on wsc273 = 0.611721611722 ***
+Completed Evaluation (WSC-273), Ensemble Size: 12 at - 26144.2847669
+Evaluating 13 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+Adding model 'lm12' to ensemble
+Restored from gs://comp551_storage/reproduce/lm12
+Done adding lm12
+Adding model 'lm13' to ensemble
+Restored from gs://comp551_storage/reproduce/lm13
+Done adding lm13
+           *** Accuracy of 13 LM(s) on wsc273 = 0.615384615385 ***
+Completed Evaluation (WSC-273), Ensemble Size: 13 at - 28214.501049
+Evaluating 14 models on wsc273 dataset:
+Adding model 'lm01' to ensemble
+Restored from gs://comp551_storage/reproduce/lm01
+Done adding lm01
+Adding model 'lm02' to ensemble
+Restored from gs://comp551_storage/reproduce/lm02
+Done adding lm02
+Adding model 'lm03' to ensemble
+Restored from gs://comp551_storage/reproduce/lm03
+Done adding lm03
+Adding model 'lm04' to ensemble
+Restored from gs://comp551_storage/reproduce/lm04
+Done adding lm04
+Adding model 'lm05' to ensemble
+Restored from gs://comp551_storage/reproduce/lm05
+Done adding lm05
+Adding model 'lm06' to ensemble
+Restored from gs://comp551_storage/reproduce/lm06
+Done adding lm06
+Adding model 'lm07' to ensemble
+Restored from gs://comp551_storage/reproduce/lm07
+Done adding lm07
+Adding model 'lm08' to ensemble
+Restored from gs://comp551_storage/reproduce/lm08
+Done adding lm08
+Adding model 'lm09' to ensemble
+Restored from gs://comp551_storage/reproduce/lm09
+Done adding lm09
+Adding model 'lm10' to ensemble
+Restored from gs://comp551_storage/reproduce/lm10
+Done adding lm10
+Adding model 'lm11' to ensemble
+Restored from gs://comp551_storage/reproduce/lm11
+Done adding lm11
+Adding model 'lm12' to ensemble
+Restored from gs://comp551_storage/reproduce/lm12
+Done adding lm12
+Adding model 'lm13' to ensemble
+Restored from gs://comp551_storage/reproduce/lm13
+Done adding lm13
+Adding model 'lm14' to ensemble
+Restored from gs://comp551_storage/reproduce/lm14
+Done adding lm14
+           *** Accuracy of 14 LM(s) on wsc273 = 0.637362637363 ***
+Completed Evaluation (WSC-273), Ensemble Size: 14 at - 30523.7140369

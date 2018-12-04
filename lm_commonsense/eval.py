@@ -176,8 +176,8 @@ class SingleRecurrentLanguageModel(object):
 def evaluate_ensemble(test_data_name, number_of_lms):
   ensemble = EnsembleLM(test_data_name)
   model_list = ['lm{:02d}'.format(i+1) for i in range(number_of_lms)]
+  print("Evaluating {} models on {} dataset:".format(number_of_lms, test_data_name))
   for model_name in model_list:
-    print('\nNew Evaluation:')
     print("Adding model '%s' to ensemble" % model_name)
     ensemble.add_single_model(model_name)
   accuracy = ensemble.evaluate()
