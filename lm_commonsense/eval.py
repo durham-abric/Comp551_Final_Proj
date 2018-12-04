@@ -129,7 +129,7 @@ class SingleRecurrentLanguageModel(object):
       self.reset()  # reset states before processing each row.
       row_probs = np.zeros([batch_size, 0])
       for j, word_patch in enumerate(row):
-        print('Processing Patch: '
+        #print('Processing Patch: '
               #'({}, {}) / ({}, {})'.format(i+1, j+1, nrow, ncol))
         patch_probs = (self._score(word_patch) if word_patch else
                       np.zeros([batch_size, num_timesteps]))
