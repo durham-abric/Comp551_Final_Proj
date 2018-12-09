@@ -1,5 +1,4 @@
 PID USER PR NI VIRT RES SHR S %CPU %MEM TIME+ COMMAND
-
 14933 durham_+  20   0 12.029g 627516  74032 R  94.1  0.3   0:16.59 python
 14933 durham_+  20   0 12.098g 700716  74096 R  94.1  0.3   0:18.78 python
 14933 durham_+  20   0 13.287g 1.857g  74284 R 100.0  0.8   0:20.89 python
