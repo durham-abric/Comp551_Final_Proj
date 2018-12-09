@@ -1,4 +1,4 @@
-dataset,numModels,accuracy,completionTime
+Dataset,# Models,Accuracy,Completion Time
 pdp60,1,0.6,124.359174967
 pdp60,2,0.6,404.700851917
 pdp60,3,0.616666666667,796.463335037
